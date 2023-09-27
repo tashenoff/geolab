@@ -1,0 +1,56 @@
+.bg{
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+
+}
+
+
+
+
+.home{
+    background-image: url('../img/top_banner.png');
+    
+}
+
+.bg-map{
+    background-image: url('../img/bg-map.png');
+    background-repeat: no-repeat;
+}
+
+
+.bg-middle{
+    background-image: url('../img/middle.png');
+    overflow: visible;
+}
+
+.footer{
+    background-image: url('../img/footer.png');
+    overflow: visible;
+}
+
+
+select{
+    background: none;
+}
+
+
+select option {
+    background: none!important;
+  }
+
+
+  .whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+  }
+  
+  .whatsapp-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: green;
+  }

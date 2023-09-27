@@ -1,0 +1,99 @@
+<script src="./js/main.js"></script>
+
+
+<footer id="footer" class="bg footer h-[542px] lg:mt-40 mt-20 relative py-40">
+    <div class="z-50 relative -top-[220px]">
+        <div class="container">
+            <div class="flex items-center justify-center">
+                <div class="w-[630px] bg-white h-full py-5 flex items-center justify-center flex-col">
+                    <div class="flex w-full">
+                     
+                        <div class="bg-primary w-full flex items-center justify-start">
+                            <h3 class="ml-5 text-[18px] py-5 text-white uppercase font-bold">
+                                Свяжитесь с нами<br>
+                                чтобы получить презентацию
+                            </h3>
+                        </div>
+                    </div>
+
+                    <form class="flex flex-col p-5 w-full h-full" action="">
+                        <input placeholder="ваше имя" class=" w-full px-5 py-3 rounded-full bg-gray-100 mt-5 "
+                            type="text">
+                        <input placeholder="Номер телефона" class=" w-full px-5 py-3 rounded-full bg-gray-100 mt-5"
+                            type="text">
+                        <button class="bg-secondary w-full px-5 py-3 rounded-full text-white mt-5">отправить</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <a href="https://api.whatsapp.com/send?phone=77023463178" target="_blank" rel="noopener noreferrer"
+        class="whatsapp-float bg-green-500 p-5 rounded-full text-white text-opacity-70">
+        <!-- <img class="w-10 h-10" src="img/wp.svg" alt=""> -->
+    </a>
+
+
+
+
+    <script>
+// Ждем, пока DOM полностью загрузится
+document.addEventListener("DOMContentLoaded", function() {
+  // Получаем ссылки на элементы
+  const hmenu = document.getElementById("hmenu");
+  const menu = document.getElementById("menu");
+
+  // Флаг для отслеживания состояния меню
+  let menuVisible = false;
+
+  // Добавляем обработчик события клика на элемент с id "hmenu"
+  hmenu.addEventListener("click", () => {
+    if (!menuVisible) {
+      // Удаляем класс "hidden" из элемента с id "menu"
+      menu.classList.remove("hidden");
+      // Добавляем класс "absolute" к элементу с id "menu"
+      menu.classList.add("absolute");
+      menuVisible = true;
+    } else {
+      // Добавляем класс "hidden" к элементу с id "menu"
+      menu.classList.add("hidden");
+      // Убираем класс "absolute" с элемента с id "menu"
+      menu.classList.remove("absolute");
+      menuVisible = false;
+    }
+  });
+
+  // Добавляем обработчик события клика на каждый элемент меню
+  const menuItems = menu.querySelectorAll("li");
+  menuItems.forEach((menuItem) => {
+    menuItem.addEventListener("click", () => {
+      // Получаем ссылку на элемент <a> внутри <li>
+      const link = menuItem.querySelector("a");
+      // Перенаправляем на ссылку, указанную в атрибуте href
+      window.location.href = link.getAttribute("href");
+    });
+  });
+});
+
+    </script>
+
+    <script>
+        document.querySelectorAll('.menu li').forEach(function (item) {
+            item.addEventListener('click', function (e) {
+                e.preventDefault();
+                var target = this.getAttribute('data-scroll-target');
+                if (target) {
+                    document.querySelector(target).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+
+
+</footer>

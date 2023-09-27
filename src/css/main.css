@@ -1,0 +1,4 @@
+@tailwind base;
+@import "style";
+@tailwind components;
+@tailwind utilities;
